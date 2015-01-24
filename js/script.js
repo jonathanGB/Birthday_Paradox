@@ -109,7 +109,16 @@ $(document).ready(function() {
 		});
 
 		$("input[type=number]").bind('keyup input', function(){
-			if (!$('#generate_table_btn').hasClass('disabled')) {
+			var group_input = $(this).val();
+
+			if (group_input.length == 0 || /\./.test(group_input) || group_input < 2 || group_input > 100) {
+				$('#generate_table_btn').addClass('disabled'); // and add popover
+				$('#group_size_input').css('background', 'red').css('color', 'white');
+			}
+
+			else {
+				$('#generate_table_btn').removeClass('disabled');
+				$(this).css('background', 'white').css('color', 'black');
 
 				// function to calculate probability given the input from the user
 				var probs_array = calculateProb(parseInt($('#group_size_input').val()), $('#bissextile_input').is(':checked'));
