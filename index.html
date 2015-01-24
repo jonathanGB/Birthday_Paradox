@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Birthday Probabilities </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	</head>
+	<body class="container">
+		<h1> The Birthday Paradox</h1>
+		<hr>
+		<h2>This is a famous probability paradox. If you had a class of n people, what would be the probability that none of them shared a same birthday date? <br>
+			Sometimes, our intuition is just plain wrong, especially in this case!</h2>
+		
+		<section id="info">
+			<h3> How to use? </h3>
+			<h4> Click on the "Group Size" input, then use your directional keys (<span class="arrow">↑</span> & <span class="arrow">↓</span>), or the arrows displayed in the input. </h4>
+			<h4> You can also type an integer from 2 to 100  and then click "Calculate Table"</h4>
+		</section>
+		<span id="tilde">~</span>
+		<nav id="menu_options">
+			<label>
+				<span class="labels">Group Size (2 to 100)</span> <br>
+				<input id="group_size_input" type="number" min="2" max="100">
+			</label>
+
+			<label>
+				<span class="labels">Bissextile Year?</span> <br>
+				<input id="bissextile_input" type="checkbox">
+			</label>
+
+			<button class="btn btn-primary" id="generate_table_btn"> Calculate Table! </button>
+		</nav>
+		
+		<br><br>
+		
+		<div id="canvas">
+			<canvas id="myChart" width="400" height="400"></canvas>
+		</div>
+
+		<footer>
+			To learn more on the subject... <br>
+			<a href="http://en.wikipedia.org/wiki/Birthday_problem">Wikipedia</a> &middot;
+			<a href="http://www.mathsisfun.com/data/probability-shared-birthday.html">Math is Fun</a>
+			<span id="tilde2">~</span>
+			<span id="github_text">My GitHub...</span>
+			<a class="btn btn-default github_logo" href="https://github.com/jonathanGB"><img src="img/github.png" alt="github logo" height="30" width="30"></a>
+		</footer>
+	</body>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/Chart.min.js"></script>	
+	<script src="js/script.js"></script>
+</html>
+
+<!-- WHAT NEEDS TO BE DONE
+	5- Update the graph when bissextille checkbox checked (plus popover "Does it even matter?)
+-->
