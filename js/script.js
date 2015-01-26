@@ -1,7 +1,7 @@
 $(document).ready(function() {
 		$('#group_size_input').val(2); // display 2 by default
 
-		// draw chart, and passing options asked by Chart.js
+		    // draw chart, and passing options asked by Chart.js
 				var ctx = document.getElementById("myChart").getContext("2d");
 
 				var options = 
@@ -101,10 +101,10 @@ $(document).ready(function() {
 				// function to calculate probability given the input from the user
 				var probs_array = calculateProb(parseInt($('#group_size_input').val()), $('#bissextile_input').is(':checked'));
 
+				// change the data for the chart, then update it
 				myBarChart.datasets[0].bars[0].value = probs_array[0];
 				myBarChart.datasets[1].bars[0].value = probs_array[1];
 				myBarChart.update();
-				// Calling update now animates the position of March from 90 to 50.
 			}
 		});
 
@@ -123,10 +123,10 @@ $(document).ready(function() {
 				// function to calculate probability given the input from the user
 				var probs_array = calculateProb(parseInt($('#group_size_input').val()), $('#bissextile_input').is(':checked'));
 
+				// change the data for the chart, then update it
 				myBarChart.datasets[0].bars[0].value = probs_array[0];
 				myBarChart.datasets[1].bars[0].value = probs_array[1];
 				myBarChart.update();
-				// Calling update now animates the position of March from 90 to 50.
 			}
 		});
 	});
