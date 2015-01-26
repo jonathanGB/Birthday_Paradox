@@ -1,5 +1,6 @@
 body {
 	font-family: "arial black" !important;
+	cursor: default;
 }
 
 hr
@@ -63,4 +64,8 @@ section, footer {
 
 #tilde2, #github_text {
 	display: block;
+}
+
+.github_logo {
+	padding: 3px 6px !important;
 }
